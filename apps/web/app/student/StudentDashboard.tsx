@@ -25,11 +25,11 @@ const studentNav = [
 ];
 
 interface StudentDashboardProps {
-    profile: Record<string, unknown> | null;
-    masteryMap: Record<string, unknown>[];
-    recentAttempts: Record<string, unknown>[];
-    nextRecommendation: Record<string, unknown> | null;
-    learningPathSteps: Record<string, unknown>[];
+    profile: Record<string, any> | null;
+    masteryMap: any[];
+    recentAttempts: any[];
+    nextRecommendation: Record<string, any> | null;
+    learningPathSteps: any[];
     riskLevel: RiskLevel;
 }
 
@@ -150,10 +150,10 @@ export function StudentDashboard({
                                             <div className="mt-1.5 h-2 overflow-hidden rounded-full bg-muted">
                                                 <div
                                                     className={`h-full rounded-full transition-all duration-500 ${pct >= 80
-                                                            ? 'bg-emerald-500'
-                                                            : pct >= 50
-                                                                ? 'bg-amber-500'
-                                                                : 'bg-red-500'
+                                                        ? 'bg-emerald-500'
+                                                        : pct >= 50
+                                                            ? 'bg-amber-500'
+                                                            : 'bg-red-500'
                                                         }`}
                                                     style={{ width: `${Math.min(pct, 100)}%` }}
                                                 />
@@ -216,18 +216,18 @@ export function StudentDashboard({
                                         >
                                             <div
                                                 className={`flex h-7 w-7 shrink-0 items-center justify-center rounded-full text-xs font-bold ${status === 'completed'
-                                                        ? 'bg-emerald-100 text-emerald-700'
-                                                        : status === 'in_progress'
-                                                            ? 'bg-primary/10 text-primary'
-                                                            : 'bg-muted text-muted-foreground'
+                                                    ? 'bg-emerald-100 text-emerald-700'
+                                                    : status === 'in_progress'
+                                                        ? 'bg-primary/10 text-primary'
+                                                        : 'bg-muted text-muted-foreground'
                                                     }`}
                                             >
                                                 {status === 'completed' ? '✓' : idx + 1}
                                             </div>
                                             <span
                                                 className={`text-sm ${status === 'completed'
-                                                        ? 'text-muted-foreground line-through'
-                                                        : 'text-foreground'
+                                                    ? 'text-muted-foreground line-through'
+                                                    : 'text-foreground'
                                                     }`}
                                             >
                                                 {(topicData?.title as string) ?? `Step ${idx + 1}`}
