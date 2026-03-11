@@ -1,0 +1,14 @@
+{
+  "name": "learn-ngrow",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev:web": "npm run dev --workspace @learn-ngrow/web",
+    "build:web": "npm run build --workspace @learn-ngrow/web",
+    "lint:web": "npm run lint --workspace @learn-ngrow/web",
+    "typecheck:web": "npm run typecheck --workspace @learn-ngrow/web"
+  }
+}
