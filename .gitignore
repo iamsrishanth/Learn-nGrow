@@ -6,3 +6,4 @@ npm-debug.log*
 apps/web/tsconfig.tsbuildinfo
 .env
 .agents/rules/abstract.md
+scripts/fix-roles.mjs
