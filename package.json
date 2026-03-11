@@ -6,9 +6,16 @@
     "packages/*"
   ],
   "scripts": {
+    "build": "npm run build --workspace @learn-ngrow/web",
     "dev:web": "npm run dev --workspace @learn-ngrow/web",
-    "build:web": "npm run build --workspace @learn-ngrow/web",
     "lint:web": "npm run lint --workspace @learn-ngrow/web",
-    "typecheck:web": "npm run typecheck --workspace @learn-ngrow/web"
+    "build:web": "npm run build --workspace @learn-ngrow/web",
+    "lint": "npm run lint --workspace @learn-ngrow/web",
+    "typecheck:web": "npm run typecheck --workspace @learn-ngrow/web",
+    "typecheck": "npm run typecheck --workspace @learn-ngrow/web",
+    "test": "npm run test --workspace @learn-ngrow/web",
+    "test:unit": "npm run test:unit --workspace @learn-ngrow/web",
+    "test:e2e": "npm run test:e2e --workspace @learn-ngrow/web",
+    "ci": "npm run lint && npm run typecheck && npm run test"
   }
 }
